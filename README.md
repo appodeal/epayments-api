@@ -1,15 +1,21 @@
-# Epayments
+# ePayments API
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/epayments`. To experiment with that code, run `bin/console` for an interactive prompt.
+ePayments API wrapper.
 
-TODO: Delete this and the text above, and describe your gem
+Supported endpoints:
+
+- Token generation
+- Payments (including preflights)
+- User info
+- Ewallet info
+- Currency exchange
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'epayments'
+gem 'epayments-api'
 ```
 
 And then execute:
@@ -18,11 +24,21 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install epayments
+    $ gem install epayments-api
 
 ## Usage
 
-TODO: Write usage instructions here
+Initialize `Epayments::API` with required credentials and make requests:
+
+```ruby
+require 'epayments-api'
+
+client = Epayments::API.new('partner_id', 'partner_secret')
+
+client.payment(payload)
+```
+
+
 
 ## Development
 
@@ -32,7 +48,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/epayments. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/appodeal/epayments-api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +56,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Epayments project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/epayments/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Epayments project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/appodeal/epayments-api/blob/master/CODE_OF_CONDUCT.md).
