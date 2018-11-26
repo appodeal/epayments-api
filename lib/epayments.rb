@@ -1,4 +1,7 @@
-require "epayments/version"
+# frozen_string_literal: true
+
+require 'epayments/version'
+require 'epayments/api'
 
 module Epayments
   class Error < StandardError; end
